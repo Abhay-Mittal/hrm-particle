@@ -1,0 +1,104 @@
+experiment_name: hrm_particle_poc_a_a100
+seed: 20260709
+
+model:
+  pretrained_model_name_or_path: sapientinc/HRM-Text-1B
+  revision: 9f082d68b8cd0ebc56e33f1c88c45609174c272c
+  dtype: bfloat16
+  device: cuda
+  freeze_backbone: true
+  freeze_lm_head: true
+  gradient_checkpointing: false
+  trust_remote_code: false
+
+prompting:
+  condition: synth,cot
+  prefix_lm: true
+  input_records_are_raw_questions: true
+
+adapter:
+  injection_site: after_h1_before_h2
+  latent_size: 64
+  bottleneck_size: 64
+  initial_relative_rms: 0.03
+  max_relative_rms: 0.10
+  rms_epsilon: 1.0e-6
+  query_conditioned: true
+  detach_query_summary: true
+  zero_latent_is_exact_zero: true
+
+particles:
+  count: 4
+  anchor_index: 0
+  anchor_latent: zero
+  anchor_decode: greedy
+  explorer_latent: normalized_gaussian
+  reuse_latent_across_response: true
+
+generation:
+  target_average_new_tokens: 96
+  max_new_tokens: 128
+  explorer_temperature: 0.8
+  top_p: 1.0
+  use_cache_for_rollout: true
+  first_token_mode: causal_prefix
+  response_prefix: "\nSolution:\n"
+  first_token_note: clean_shared_prefixlm_prefill_then_particle_injected_causal_prefix
+
+data:
+  directory: data/processed
+  train_file: train.jsonl
+  dev_file: dev.jsonl
+  test_file: test.jsonl
+  ood_file: ood.jsonl
+  max_train_examples: 600
+  max_dev_examples: 160
+  shuffle_train: true
+  require_manifest: true
+  require_split_isolation: true
+
+optimization:
+  adapter_learning_rate: 1.0e-4
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  prompt_micro_batch_size: 1
+  gradient_accumulation_steps: 8
+  rollout_rounds: 2
+  actor_epochs_per_rollout: 1
+  ppo_clip_epsilon: 0.2
+  rescue_alpha: 0.2
+  kl_coefficient: 0.02
+  target_kl_per_token: 0.02
+  mixed_precision: bf16
+
+q_head:
+  enabled: true
+  train_online_from_verified_rollouts: true
+  detach_actor_states: true
+  bottleneck_size: 256
+  learning_rate: 3.0e-4
+  weight_decay: 0.01
+  ranking_weight: 0.1
+  actor_reward_source: external_exact_verifier
+  use_q_as_actor_reward: false
+  use_q_for_selection_during_training: false
+
+checkpointing:
+  save_every_updates: 50
+  save_optimizer: true
+  save_rollout_rng_state: true
+
+logging:
+  log_every_updates: 5
+  wandb_mode: disabled
+
+output:
+  directory: runs/poc_a100
+
+budget:
+  gpu_type: A100-80GB
+  hourly_usd: 1.39
+  max_gpu_hours: 20.0
+  max_cost_usd: 30.0
+  check_deadline_every_updates: 1
+  stop_buffer_minutes: 10

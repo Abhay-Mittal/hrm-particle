@@ -1,0 +1,19 @@
+# Install the local package separately with: pip install -e .
+torch>=2.6
+transformers>=5.9,<6
+accelerate>=1.4
+datasets>=3.2
+huggingface-hub>=0.30
+safetensors>=0.5
+PyYAML>=6
+math-verify[antlr4_13_2]>=0.8,<0.9
+evalplus==0.3.1
+peft>=0.15
+wandb>=0.19
+pytest>=8.3
+ruff>=0.11
+nbformat>=5.10
+
+# Sandboxed code RL uses Open-R1's provider abstraction. The notebook installs
+# open-r1[code] from commit 1416fa0cf21595d2083b399a2a0bbddd7f6e9563;
+# generated code is never run locally.

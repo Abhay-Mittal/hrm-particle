@@ -1,0 +1,54 @@
+experiment_name: hrm_particle_eval
+seed: 20260709
+
+model:
+  pretrained_model_name_or_path: sapientinc/HRM-Text-1B
+  revision: 9f082d68b8cd0ebc56e33f1c88c45609174c272c
+  dtype: bfloat16
+  device: cuda
+  freeze_backbone: true
+
+prompting:
+  condition: synth,cot
+  prefix_lm: true
+  input_records_are_raw_questions: true
+
+adapter:
+  injection_site: after_h1_before_h2
+  latent_size: 64
+  bottleneck_size: 64
+  initial_relative_rms: 0.03
+  max_relative_rms: 0.10
+  zero_latent_is_exact_zero: true
+
+particles:
+  count: 4
+  anchor_index: 0
+  anchor_decode: greedy
+  explorer_latent: normalized_gaussian
+  reuse_latent_across_response: true
+
+generation:
+  max_new_tokens: 128
+  explorer_temperature: 0.8
+  top_p: 1.0
+  first_token_mode: causal_prefix
+  response_prefix: "\nSolution:\n"
+
+data:
+  directory: data/processed
+  dev_file: dev.jsonl
+  test_file: test.jsonl
+  ood_file: ood.jsonl
+  require_manifest: true
+  require_split_isolation: true
+
+evaluation:
+  splits: [test, ood]
+  prompt_batch_size: 1
+  bootstrap_samples: 2000
+  confidence_level: 0.95
+  save_candidate_text: true
+
+output:
+  directory: runs/eval

@@ -1,0 +1,67 @@
+experiment_name: offline_dummy_smoke
+seed: 20260709
+
+runtime:
+  dummy: true
+  offline: true
+
+model:
+  pretrained_model_name_or_path: __dummy__
+  dtype: float32
+  device: cpu
+  freeze_backbone: true
+  freeze_lm_head: true
+
+prompting:
+  condition: synth,cot
+  prefix_lm: true
+  input_records_are_raw_questions: true
+
+adapter:
+  injection_site: after_h1_before_h2
+  latent_size: 8
+  bottleneck_size: 8
+  initial_relative_rms: 0.03
+  max_relative_rms: 0.10
+  zero_latent_is_exact_zero: true
+
+particles:
+  count: 4
+  anchor_index: 0
+  reuse_latent_across_response: true
+
+generation:
+  target_average_new_tokens: 4
+  max_new_tokens: 8
+  explorer_temperature: 0.8
+  top_p: 1.0
+  first_token_mode: causal_prefix
+  response_prefix: "\nSolution:\n"
+
+data:
+  directory: data/processed
+  train_file: train.jsonl
+  max_train_examples: 8
+
+optimization:
+  adapter_learning_rate: 1.0e-3
+  prompt_micro_batch_size: 2
+  gradient_accumulation_steps: 1
+  rollout_rounds: 1
+  actor_epochs_per_rollout: 1
+  ppo_clip_epsilon: 0.2
+  rescue_alpha: 0.2
+
+q_head:
+  enabled: true
+  detach_actor_states: true
+  use_q_as_actor_reward: false
+
+output:
+  directory: runs/smoke
+
+budget:
+  gpu_type: CPU
+  hourly_usd: 0.01
+  max_gpu_hours: 0.1
+  max_cost_usd: 0.01

@@ -1,0 +1,44 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Private experiment state and credentials
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+
+# Generated datasets (the six-row data/sample fixture stays tracked)
+data/processed/
+data/external/
+data/v1/
+
+# Models, logs, and scratch output
+runs/
+checkpoints/
+wandb/
+logs/
+work/
+tmp/
+*.safetensors
+*.pt
+*.pth
+
+# LaTeX build intermediates (keep source PDFs and .tex files)
+*.aux
+*.log
+*.out
+
+# Local Hugging Face caches
+.cache/
+huggingface/
+
+.DS_Store

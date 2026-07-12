@@ -1,0 +1,7 @@
+# Core runtime. A CUDA-enabled Runpod PyTorch image may already satisfy torch.
+torch>=2.6
+transformers>=5.9,<6
+accelerate>=1.4
+safetensors>=0.5
+PyYAML>=6
+

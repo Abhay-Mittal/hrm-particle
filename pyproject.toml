@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hrm-particle-poc"
+version = "0.1.0"
+description = "Query-conditioned sequence-latent branching POC for HRM-Text"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+dependencies = [
+  "torch>=2.6",
+  "transformers>=5.9,<6",
+  "accelerate>=1.4",
+  "safetensors>=0.5",
+  "PyYAML>=6",
+]
+
+[project.optional-dependencies]
+data = ["datasets>=3.2"]
+train = ["peft>=0.15", "wandb>=0.19"]
+test = ["pytest>=8.3", "pytest-cov>=6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+  "integration: CPU integration tests that exercise a full dummy rollout/update",
+  "gpu: requires CUDA and is skipped by default",
+  "network: downloads external artifacts and is skipped by default",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+

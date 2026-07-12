@@ -1,0 +1,158 @@
+experiment_name: hrm_text_1b_particle_v1_poc_2gpu
+seed: 20260710
+
+model:
+  pretrained_model_name_or_path: sapientinc/HRM-Text-1B
+  revision: 9f082d68b8cd0ebc56e33f1c88c45609174c272c
+  dtype: bfloat16
+  attention_implementation: sdpa
+  expected_parameter_count: 1182795264
+  expected_hidden_size: 1536
+  expected_vocab_size: 65536
+  expected_h_cycles: 2
+  expected_l_cycles: 3
+  expected_layers_per_stack: 16
+  expected_max_position_embeddings: 4096
+  trust_remote_code: false
+
+runtime:
+  world_size: 2
+  mixed_precision: bf16
+  dynamo_backend: "no"
+  deterministic_algorithms: false
+  tf32: true
+  nccl_timeout_minutes: 30
+  checkpoint_every_updates: 20
+  log_every_updates: 1
+  stop_buffer_minutes: 12
+
+paths:
+  data_directory: data/v1_poc
+  run_directory: runs/v1_2gpu_poc
+  q_state_directory: runs/v1_2gpu_poc/q_states
+  q_checkpoint: runs/v1_2gpu_poc/q-head.safetensors
+  q_calibration: runs/v1_2gpu_poc/q-calibration.json
+  final_q_calibration: runs/v1_2gpu_poc/final-q-calibration.json
+  code_provider_canary: runs/v1_2gpu_poc/code-provider-canary.json
+  token_audit: runs/v1_2gpu_poc/token-audit.json
+  memory_plan: runs/v1_2gpu_poc/memory-plan.json
+  noise_scale_selection: runs/v1_2gpu_poc/noise-scale-selection.json
+
+memory:
+  # Probe the real longest-prompt rollout/replay/backward on every rank.  The
+  # smallest safe result is shared across ranks; accelerator names are ignored.
+  auto_scale: true
+  target_fraction: 0.75
+  hard_limit_fraction: 0.80
+  minimum_free_gib: 4.0
+  scaling_safety_factor: 1.15
+  candidate_prompt_batch_sizes: [1, 2, 4, 8]
+  target_prompt_groups_per_rank_update: 8
+  maximum_q_batch_prompt_groups: 128
+
+prompting:
+  condition: synth,cot
+  response_prefix: "\nSolution:\n"
+  math_suffix: "\nShow the reasoning, then end with one final answer in \\boxed{...}."
+  code_suffix: "\nReturn exactly one complete Python solution in a ```python``` block."
+
+adapter:
+  # Used only when particles.mode=learned.  Gaussian mode has no adapter
+  # parameters and uses a full-hidden-state random direction directly.
+  latent_size: 64
+  bottleneck_size: 64
+  initial_relative_rms: 0.03
+  max_relative_rms: 0.10
+  rms_epsilon: 1.0e-6
+  injection_after_high_cycle: 0
+
+particles:
+  mode: gaussian
+  count: 4
+  anchor_index: 0
+  anchor_decode: greedy
+  explorer_temperature: 0.8
+  top_p: 1.0
+  gaussian:
+    # One direction is sampled per explorer and reused for the whole response.
+    # Scale selection uses only a disjoint rl_train slice, then freezes the
+    # selected value before Q collection and final benchmarks.
+    schedule: response_fixed
+    default_relative_rms: 0.02
+    scale_candidates: [0.0, 0.005, 0.01, 0.02, 0.03, 0.05]
+    sweep_prompt_groups: 128
+    oracle_tie_tolerance: 0.0
+
+generation:
+  train_max_new_tokens: 256
+  q_collect_max_new_tokens: 192
+  math_eval_max_new_tokens: 256
+  code_eval_max_new_tokens: 384
+  use_cache_for_rollout: true
+  first_token_mode: causal_prefix
+
+q_warmup:
+  target_candidate_examples: 8192
+  expected_prompt_groups: 2048
+  bottleneck_size: 256
+  prior_probability: 0.5
+  learning_rate: 3.0e-4
+  weight_decay: 0.01
+  epochs: 5
+  batch_prompt_groups: auto
+  ranking_weight: 0.10
+  split_percentages:
+    train: 70
+    early_stop: 10
+    margin_select: 10
+    safety_test: 10
+  calibration_margins: [0.0, 0.1, 0.2, 0.35, 0.5, 0.75, 1.0, 1.5, 2.0]
+  bootstrap_samples: 2000
+  maximum_allowed_degradation: 0.0
+  minimum_global_calibration_prompts: 128
+  minimum_math_calibration_prompts: 96
+  minimum_code_calibration_prompts: 32
+
+rl:
+  # Actor optimization is disabled in default Gaussian mode. These settings are
+  # retained for the optional particles.mode=learned extension. A deliberately
+  # high ceiling lets that mode's 8-hour notebook deadline stop the run.
+  max_updates: 1000
+  pilot_updates: 12
+  prompt_micro_batch_size: auto
+  gradient_accumulation_steps: auto
+  actor_learning_rate: 5.0e-5
+  q_learning_rate: 1.5e-4
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  ppo_clip_epsilon: 0.2
+  rescue_alpha: 0.2
+  kl_coefficient: 0.02
+  injection_penalty_coefficient: 1.0e-3
+  q_ranking_weight: 0.10
+  code_fraction: 0.20
+  code_binary_reward_weight: 0.80
+  code_min_nonzero_groups: 8
+  code_min_nonzero_fraction: 0.02
+  code_min_mixed_fraction: 0.02
+  one_ppo_epoch_per_rollout: true
+
+verification:
+  math_backend: math_verify
+  code_backend: open_r1_sandbox
+  open_r1_commit: 1416fa0cf21595d2083b399a2a0bbddd7f6e9563
+  code_provider: e2b
+  code_parallelism_per_rank: 4
+  fail_closed_without_sandbox: true
+
+evaluation:
+  math_benchmarks: [gsm8k, math500, gsm_symbolic]
+  code_benchmarks: [mbpp]
+  gsm_symbolic_limit: 200
+  prompt_batch_size: auto
+  bootstrap_samples: 2000
+  save_all_candidate_text: true
+  ordinary_sampling_candidates: 4
+  particle_candidates: 4
+  evalplus_version: 0.3.1
+  evalplus_image: ganler/evalplus@sha256:26b118098bef281fe8dfe999bf05f1d5b45374b4e6c00161ec0f30592aef4740

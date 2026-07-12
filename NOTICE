@@ -1,0 +1,17 @@
+HRM Particle POC
+Copyright 2026
+
+This distribution contains original experiment code under the Apache License 2.0.
+
+It interoperates with, but does not redistribute, the following separately
+licensed artifacts:
+
+* sapientinc/HRM-Text-1B (Apache-2.0), downloaded from Hugging Face at runtime.
+* SynthLabsAI/Big-Math-RL-Verified (Apache-2.0), optionally downloaded by the
+  user after accepting any current Hugging Face access conditions.
+* open-r1/Big-Math-RL-Verified-Processed, an optional processed derivative of
+  SynthLabsAI/Big-Math-RL-Verified.
+
+Users are responsible for reviewing the current upstream model/dataset cards,
+licenses, terms, and attribution requirements before use or redistribution.
+

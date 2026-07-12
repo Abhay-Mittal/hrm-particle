@@ -1,0 +1,6 @@
+-r requirements-train.txt
+-r requirements-data.txt
+pytest>=8.3
+pytest-cov>=6
+ruff>=0.9
+
