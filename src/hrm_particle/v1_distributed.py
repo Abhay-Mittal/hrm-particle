@@ -223,11 +223,12 @@ def _distributed_context(config: Mapping[str, Any], *, require_distributed: bool
         )
     torch.cuda.set_device(local_rank)
     device = torch.device("cuda", local_rank)
-    if world_size > 1 and not dist.is_initialized():
+    if not dist.is_initialized():
         timeout = int(config["runtime"].get("nccl_timeout_minutes", 30))
         from datetime import timedelta
 
-        dist.init_process_group("nccl", timeout=timedelta(minutes=timeout))
+        backend = "nccl" if world_size > 1 else "gloo"
+        dist.init_process_group(backend, timeout=timedelta(minutes=timeout))
     return DistributedContext(rank, local_rank, world_size, device)
 
 
@@ -4371,8 +4372,8 @@ def validate_v1_config(config: Mapping[str, Any]) -> dict[str, Any]:
     evaluation = config["evaluation"]
 
     world_size = int(runtime["world_size"])
-    if world_size not in {2, 3}:
-        raise ValueError("the tested V1 supports exactly two or three GPU ranks")
+    if world_size not in {1, 2, 3}:
+        raise ValueError("the tested V1 supports one, two, or three GPU ranks")
     if str(runtime["mixed_precision"]).lower() not in {"bf16", "bfloat16"}:
         raise ValueError("runtime mixed_precision must be bfloat16")
     if str(runtime["dynamo_backend"]).lower() not in {"no", "none"}:

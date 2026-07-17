@@ -110,6 +110,10 @@ class MathVerifyScorer:
         # than poisoning Q labels with false negatives.
         try:
             gold_parsed = parse_fn(gold)
+            if not gold_parsed:
+                # Some valid LaTeX shorthand (e.g. \frac23, \dfrac, \sqrt[n]{})
+                # only parses when wrapped in math-mode delimiters.
+                gold_parsed = parse_fn(f"${gold}$")
         except Exception as exc:
             raise RuntimeError("math verifier failed while parsing the gold answer") from exc
         if not gold_parsed:

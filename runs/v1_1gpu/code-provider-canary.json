@@ -1,0 +1,26 @@
+{
+  "checked_at_unix": 1784188020.4762952,
+  "checks": {
+    "changed_line_boundary": 0.0,
+    "extra_output": 0.0,
+    "known_good": 1.0,
+    "missing_output": 0.0,
+    "nonzero_exit": 0.0,
+    "output_cap": 0.0,
+    "timeout": 0.0
+  },
+  "format": "hrm-particle-v1-code-provider-canary",
+  "harness_version": "strict-stdin-stdout-v1",
+  "open_r1_commit": "1416fa0cf21595d2083b399a2a0bbddd7f6e9563",
+  "package_versions": {
+    "accelerate": "1.4.0",
+    "datasets": "5.0.0",
+    "evalplus": "0.3.1",
+    "math-verify": "0.5.2",
+    "open-r1": "0.1.0.dev0",
+    "safetensors": "0.8.0",
+    "torch": "2.13.0a0+git1979118",
+    "transformers": "4.52.3"
+  },
+  "provider": "e2b"
+}

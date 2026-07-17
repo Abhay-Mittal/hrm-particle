@@ -1,0 +1,331 @@
+{
+  "checkpoint": "/localhome/local-abhaym/bench/hrm-particle/runs/v1_1gpu/q-head.safetensors",
+  "checkpoint_provenance_hash": "15090e7458cc4afc8f61c4d11e1a32947cfd6980a6fa89622fecf6ae66c357cb",
+  "checkpoint_sha256": "c2b967f9e9f32ad30314e545095d0429dcb1d362b496e2ca5bdf9ecde014e53c",
+  "checkpoint_step": 0,
+  "data_fingerprints": {
+    "files": {
+      "eval": {
+        "bytes": 2095888,
+        "path": "eval_math.jsonl",
+        "records": 2319,
+        "sha256": "b32e7451aa3a0849a78b7289686a26874024e9291bffcc3088de8e26be6f1391"
+      },
+      "q_warm": {
+        "bytes": 17610495,
+        "path": "q_warm.jsonl",
+        "records": 2048,
+        "sha256": "a952f71925fa58a68b113832676cc160d0bec9ac59dd2a12ac1254ddd428b473"
+      },
+      "rl_train": {
+        "bytes": 15474429,
+        "path": "rl_train.jsonl",
+        "records": 5000,
+        "sha256": "9d931b8aef8086d4406a8a2bb77e77de5f5dfe09287f8dfa122fa10b8917ef7d"
+      }
+    },
+    "generator_version": "hrm_particle_v1_math_code_1",
+    "manifest_sha256": "f9dbf294d2b4b658a7cacaef83b160f2b2dd3f3986749b58e50338026af13594",
+    "schema_version": 1
+  },
+  "format": "hrm-particle-v1-final-q-calibration",
+  "gates": {
+    "code": {
+      "margin": 2.0,
+      "q_ready": true,
+      "ready": true,
+      "reason": "disjoint margin-selection and safety-test gates passed",
+      "safety_prompts": 51,
+      "safety_test": {
+        "anchor_accuracy": 0.0,
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "confidence": 0.95,
+        "margin": 2.0,
+        "max_degradation": 0.0,
+        "mean_delta": 0.0,
+        "num_prompts": 51,
+        "ready": true,
+        "reason": "paired bootstrap no-degradation gate passed",
+        "selected_accuracy": 0.0,
+        "switch_count": 12,
+        "switch_fraction": 0.23529411764705882,
+        "trials": [
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 2.0,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 12,
+            "switch_fraction": 0.23529411764705882
+          }
+        ]
+      },
+      "selection": {
+        "anchor_accuracy": 0.0,
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "confidence": 0.95,
+        "margin": 2.0,
+        "max_degradation": 0.0,
+        "mean_delta": 0.0,
+        "num_prompts": 51,
+        "ready": true,
+        "reason": "paired bootstrap no-degradation gate passed",
+        "selected_accuracy": 0.0,
+        "switch_count": 14,
+        "switch_fraction": 0.27450980392156865,
+        "trials": [
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 0.0,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 37,
+            "switch_fraction": 0.7254901960784313
+          },
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 0.1,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 35,
+            "switch_fraction": 0.6862745098039216
+          },
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 0.2,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 34,
+            "switch_fraction": 0.6666666666666666
+          },
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 0.35,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 29,
+            "switch_fraction": 0.5686274509803921
+          },
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 0.5,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 26,
+            "switch_fraction": 0.5098039215686274
+          },
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 0.75,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 22,
+            "switch_fraction": 0.43137254901960786
+          },
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 1.0,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 22,
+            "switch_fraction": 0.43137254901960786
+          },
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 1.5,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 17,
+            "switch_fraction": 0.3333333333333333
+          },
+          {
+            "ci_high": 0.0,
+            "ci_low": 0.0,
+            "margin": 2.0,
+            "mean_delta": 0.0,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.0,
+            "switch_count": 14,
+            "switch_fraction": 0.27450980392156865
+          }
+        ]
+      },
+      "selection_prompts": 51
+    },
+    "math": {
+      "margin": 2.0,
+      "q_ready": true,
+      "ready": true,
+      "reason": "disjoint margin-selection and safety-test gates passed",
+      "safety_prompts": 153,
+      "safety_test": {
+        "anchor_accuracy": 0.49673202614379086,
+        "ci_high": 0.13071895424836602,
+        "ci_low": 0.0457516339869281,
+        "confidence": 0.95,
+        "margin": 2.0,
+        "max_degradation": 0.0,
+        "mean_delta": 0.08496732026143791,
+        "num_prompts": 153,
+        "ready": true,
+        "reason": "paired bootstrap no-degradation gate passed",
+        "selected_accuracy": 0.5816993464052288,
+        "switch_count": 27,
+        "switch_fraction": 0.17647058823529413,
+        "trials": [
+          {
+            "ci_high": 0.13071895424836602,
+            "ci_low": 0.0457516339869281,
+            "margin": 2.0,
+            "mean_delta": 0.08496732026143791,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.5816993464052288,
+            "switch_count": 27,
+            "switch_fraction": 0.17647058823529413
+          }
+        ]
+      },
+      "selection": {
+        "anchor_accuracy": 0.5032679738562091,
+        "ci_high": 0.1437908496732026,
+        "ci_low": 0.05228758169934641,
+        "confidence": 0.95,
+        "margin": 2.0,
+        "max_degradation": 0.0,
+        "mean_delta": 0.09803921568627451,
+        "num_prompts": 153,
+        "ready": true,
+        "reason": "paired bootstrap no-degradation gate passed",
+        "selected_accuracy": 0.6013071895424836,
+        "switch_count": 30,
+        "switch_fraction": 0.19607843137254902,
+        "trials": [
+          {
+            "ci_high": 0.1437908496732026,
+            "ci_low": 0.0196078431372549,
+            "margin": 0.0,
+            "mean_delta": 0.0784313725490196,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.5816993464052288,
+            "switch_count": 124,
+            "switch_fraction": 0.8104575163398693
+          },
+          {
+            "ci_high": 0.1437908496732026,
+            "ci_low": 0.026143790849673203,
+            "margin": 0.1,
+            "mean_delta": 0.08496732026143791,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.5882352941176471,
+            "switch_count": 110,
+            "switch_fraction": 0.7189542483660131
+          },
+          {
+            "ci_high": 0.13725490196078433,
+            "ci_low": 0.0196078431372549,
+            "margin": 0.2,
+            "mean_delta": 0.0784313725490196,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.5816993464052288,
+            "switch_count": 99,
+            "switch_fraction": 0.6470588235294118
+          },
+          {
+            "ci_high": 0.13725490196078433,
+            "ci_low": 0.0196078431372549,
+            "margin": 0.35,
+            "mean_delta": 0.0784313725490196,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.5816993464052288,
+            "switch_count": 90,
+            "switch_fraction": 0.5882352941176471
+          },
+          {
+            "ci_high": 0.13071895424836602,
+            "ci_low": 0.026143790849673203,
+            "margin": 0.5,
+            "mean_delta": 0.0784313725490196,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.5816993464052288,
+            "switch_count": 75,
+            "switch_fraction": 0.49019607843137253
+          },
+          {
+            "ci_high": 0.13725490196078433,
+            "ci_low": 0.0457516339869281,
+            "margin": 0.75,
+            "mean_delta": 0.0915032679738562,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.5947712418300654,
+            "switch_count": 48,
+            "switch_fraction": 0.3137254901960784
+          },
+          {
+            "ci_high": 0.1437908496732026,
+            "ci_low": 0.05228758169934641,
+            "margin": 1.0,
+            "mean_delta": 0.09803921568627451,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.6013071895424836,
+            "switch_count": 38,
+            "switch_fraction": 0.24836601307189543
+          },
+          {
+            "ci_high": 0.1437908496732026,
+            "ci_low": 0.05228758169934641,
+            "margin": 1.5,
+            "mean_delta": 0.09803921568627451,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.6013071895424836,
+            "switch_count": 33,
+            "switch_fraction": 0.21568627450980393
+          },
+          {
+            "ci_high": 0.1437908496732026,
+            "ci_low": 0.05228758169934641,
+            "margin": 2.0,
+            "mean_delta": 0.09803921568627451,
+            "passes_no_degradation_gate": true,
+            "selected_accuracy": 0.6013071895424836,
+            "switch_count": 30,
+            "switch_fraction": 0.19607843137254902
+          }
+        ]
+      },
+      "selection_prompts": 153
+    }
+  },
+  "note": "Fresh candidates/states were generated with the final adapter. Margins are selected and safety-tested on disjoint prompt groups.",
+  "prompt_groups": 408,
+  "shard_sha256": {
+    "rank-00.jsonl": "14140a2c127589f74ee34bac3a004fe6eb98cac1d8545ecc907ede38cf5ff070"
+  },
+  "split_algorithm": "source-stratified-sha256-largest-remainder-v1",
+  "split_percentages": {
+    "early_stop": 10,
+    "margin_select": 10,
+    "safety_test": 10,
+    "train": 70
+  },
+  "training_stopped_for_budget": false
+}

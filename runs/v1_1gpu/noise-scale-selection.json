@@ -1,0 +1,934 @@
+{
+  "confirmation_gate": "point-estimate no-degradation overall and separately for math/code",
+  "confirmation_metrics": {
+    "0.0": {
+      "anchor_accuracy": 0.015625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 13,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.0196078431372549,
+          "explorer_mean_accuracy": 0.0130718954248366,
+          "mixed_fraction": 0.058823529411764705,
+          "oracle_at_k": 0.058823529411764705,
+          "prompt_groups": 51,
+          "rescue_fraction": 0.0392156862745098
+        }
+      },
+      "explorer_mean_accuracy": 0.010416666666666666,
+      "mixed_fraction": 0.046875,
+      "oracle_at_k": 0.046875,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.03125,
+      "scale": 0.0
+    },
+    "0.005": {
+      "anchor_accuracy": 0.015625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 13,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.0196078431372549,
+          "explorer_mean_accuracy": 0.0130718954248366,
+          "mixed_fraction": 0.058823529411764705,
+          "oracle_at_k": 0.058823529411764705,
+          "prompt_groups": 51,
+          "rescue_fraction": 0.0392156862745098
+        }
+      },
+      "explorer_mean_accuracy": 0.010416666666666666,
+      "mixed_fraction": 0.046875,
+      "oracle_at_k": 0.046875,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.03125,
+      "scale": 0.005
+    },
+    "0.01": {
+      "anchor_accuracy": 0.015625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 13,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.0196078431372549,
+          "explorer_mean_accuracy": 0.0130718954248366,
+          "mixed_fraction": 0.058823529411764705,
+          "oracle_at_k": 0.058823529411764705,
+          "prompt_groups": 51,
+          "rescue_fraction": 0.0392156862745098
+        }
+      },
+      "explorer_mean_accuracy": 0.010416666666666666,
+      "mixed_fraction": 0.046875,
+      "oracle_at_k": 0.046875,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.03125,
+      "scale": 0.01
+    },
+    "0.02": {
+      "anchor_accuracy": 0.015625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 13,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.0196078431372549,
+          "explorer_mean_accuracy": 0.0196078431372549,
+          "mixed_fraction": 0.0784313725490196,
+          "oracle_at_k": 0.0784313725490196,
+          "prompt_groups": 51,
+          "rescue_fraction": 0.058823529411764705
+        }
+      },
+      "explorer_mean_accuracy": 0.015625,
+      "mixed_fraction": 0.0625,
+      "oracle_at_k": 0.0625,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.046875,
+        "low": 0.0,
+        "mean_delta": 0.015625
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.046875,
+      "scale": 0.02
+    },
+    "0.03": {
+      "anchor_accuracy": 0.015625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 13,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.0196078431372549,
+          "explorer_mean_accuracy": 0.0261437908496732,
+          "mixed_fraction": 0.09803921568627451,
+          "oracle_at_k": 0.09803921568627451,
+          "prompt_groups": 51,
+          "rescue_fraction": 0.0784313725490196
+        }
+      },
+      "explorer_mean_accuracy": 0.020833333333333332,
+      "mixed_fraction": 0.078125,
+      "oracle_at_k": 0.078125,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.078125,
+        "low": 0.0,
+        "mean_delta": 0.03125
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.0625,
+      "scale": 0.03
+    },
+    "0.05": {
+      "anchor_accuracy": 0.015625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 13,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.0196078431372549,
+          "explorer_mean_accuracy": 0.0196078431372549,
+          "mixed_fraction": 0.058823529411764705,
+          "oracle_at_k": 0.058823529411764705,
+          "prompt_groups": 51,
+          "rescue_fraction": 0.0392156862745098
+        }
+      },
+      "explorer_mean_accuracy": 0.015625,
+      "mixed_fraction": 0.046875,
+      "oracle_at_k": 0.046875,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.03125,
+      "scale": 0.05
+    }
+  },
+  "confirmation_prompt_ids": [
+    "v1-dapo-math-en-117ff8550ba07e3f1ffd",
+    "v1-dapo-math-en-1f2c2b75fea348beceb2",
+    "v1-dapo-math-en-2735adf1940d0940feef",
+    "v1-dapo-math-en-2bc6ba593f01de70f503",
+    "v1-dapo-math-en-2fa5ca7b96297c30d8f9",
+    "v1-dapo-math-en-3658fbb75cf9f4ca82fe",
+    "v1-dapo-math-en-37bca4e48181d6d13600",
+    "v1-dapo-math-en-417bb97a2dea5fec314d",
+    "v1-dapo-math-en-42c6e0101ee0dbed854d",
+    "v1-dapo-math-en-438363e972f0f40cf883",
+    "v1-dapo-math-en-43903804a05321fe5f0f",
+    "v1-dapo-math-en-509a7d2a8043062cadd4",
+    "v1-dapo-math-en-5679391db5cf1f891c86",
+    "v1-dapo-math-en-57faae5d5269c992b70c",
+    "v1-dapo-math-en-5f91a2add3fd75693558",
+    "v1-dapo-math-en-66a6bcb7049969acfd69",
+    "v1-dapo-math-en-67a0fcc4d5d6aab7074f",
+    "v1-dapo-math-en-6a1568b8e265229a7136",
+    "v1-dapo-math-en-6d1a786e958fcd113d4f",
+    "v1-dapo-math-en-74e7117530cada9343af",
+    "v1-dapo-math-en-790a0dc8dbff260da14f",
+    "v1-dapo-math-en-7912bdc4f87f8998711e",
+    "v1-dapo-math-en-807eb5b12e52d54805c9",
+    "v1-dapo-math-en-8c292e17d0edd5debc5b",
+    "v1-dapo-math-en-8fc07dbf2fd3bf8dd3de",
+    "v1-dapo-math-en-91f9c2b940d2c2729be4",
+    "v1-dapo-math-en-9425854e3e44dcf0309b",
+    "v1-dapo-math-en-9433a9b8870c16cc43b2",
+    "v1-dapo-math-en-987b41c7f435c6fdefce",
+    "v1-dapo-math-en-98915a4557964f9e1953",
+    "v1-dapo-math-en-a2514a34f4d855a1cf08",
+    "v1-dapo-math-en-a86b3db86e975fc47ade",
+    "v1-dapo-math-en-ae64eb184758a2aea80a",
+    "v1-dapo-math-en-b6e30fa14f8a9eb7ed5b",
+    "v1-dapo-math-en-bcaf527996e50db3cde7",
+    "v1-dapo-math-en-c2e78eda64cf98b92ae7",
+    "v1-dapo-math-en-c7263a6b47df6282a3f7",
+    "v1-dapo-math-en-c8a999021ce3e1a37b72",
+    "v1-dapo-math-en-d4d43f10159ce54d63e1",
+    "v1-dapo-math-en-d9579e306adb2a11e8d5",
+    "v1-dapo-math-en-dad762a89fb0f9479ccf",
+    "v1-dapo-math-en-dcf55865eab83c75a6f4",
+    "v1-dapo-math-en-dcfa04c518dafd2c191d",
+    "v1-dapo-math-en-ed6de5c09667300604e3",
+    "v1-dapo-math-en-edcdf851ede0da8b8808",
+    "v1-dapo-math-en-f0c08d70693646ad9e87",
+    "v1-dapo-math-en-f12fbaca6938d3262ef2",
+    "v1-dapo-math-en-f43e3a968e9bfa9dbc26",
+    "v1-dapo-math-en-f69784b05652bdc5443c",
+    "v1-dapo-math-en-fa308f0fcbb0283cd739",
+    "v1-dapo-math-en-fe7864a5ca0e79740bd1",
+    "v1-verified-python-0a16157aecb38ae5663c",
+    "v1-verified-python-0f4f6c231f3371db34e9",
+    "v1-verified-python-156b1d7898564b8ab665",
+    "v1-verified-python-1f2cfd8d476bb790d9ed",
+    "v1-verified-python-45c64180523523e0e152",
+    "v1-verified-python-4a66d2b7e21ef85c4ee3",
+    "v1-verified-python-674f2e66d305591a1a53",
+    "v1-verified-python-9c016463f1b4504f9345",
+    "v1-verified-python-bd573fda3f2b409410f3",
+    "v1-verified-python-d221226639d4849fc3e7",
+    "v1-verified-python-d520ec51f5cb84262613",
+    "v1-verified-python-db58e3795161ccad173b",
+    "v1-verified-python-f0a56b149faa2b8983da"
+  ],
+  "confirmation_task_deltas": {
+    "code": 0.0,
+    "math": 0.0
+  },
+  "development_evidence_positive": false,
+  "format": "hrm-particle-v1-noise-scale-selection",
+  "identity": {
+    "code_hash": "c03d114d341fe381cec2b00afbbf743485330808494b1d6fc470081d21879592",
+    "data": {
+      "files": {
+        "eval": {
+          "bytes": 2095888,
+          "path": "eval_math.jsonl",
+          "records": 2319,
+          "sha256": "b32e7451aa3a0849a78b7289686a26874024e9291bffcc3088de8e26be6f1391"
+        },
+        "q_warm": {
+          "bytes": 17610495,
+          "path": "q_warm.jsonl",
+          "records": 2048,
+          "sha256": "a952f71925fa58a68b113832676cc160d0bec9ac59dd2a12ac1254ddd428b473"
+        },
+        "rl_train": {
+          "bytes": 15474429,
+          "path": "rl_train.jsonl",
+          "records": 5000,
+          "sha256": "9d931b8aef8086d4406a8a2bb77e77de5f5dfe09287f8dfa122fa10b8917ef7d"
+        }
+      },
+      "generator_version": "hrm_particle_v1_math_code_1",
+      "manifest_sha256": "f9dbf294d2b4b658a7cacaef83b160f2b2dd3f3986749b58e50338026af13594",
+      "schema_version": 1
+    },
+    "memory_plan_sha256": "ef81b57bde2e37ed243db7157080c8dee46d1152956cc7812818fb5f8af2527a",
+    "model_revision": "9f082d68b8cd0ebc56e33f1c88c45609174c272c",
+    "package_versions": {
+      "accelerate": "1.4.0",
+      "datasets": "5.0.0",
+      "evalplus": "0.3.1",
+      "math-verify": "0.8.0",
+      "open-r1": "0.1.0.dev0",
+      "safetensors": "0.8.0",
+      "torch": "2.13.0a0+git1979118",
+      "transformers": "5.14.0"
+    },
+    "particle_mode": "gaussian",
+    "selected_prompt_groups": 128,
+    "selected_prompt_ids_sha256": "596123c5060e8e94a02fe2aa199cf94960fa8706ec65a17fe16c7b7fdf7a5198",
+    "sweep_config_hash": "9653a722fe141180ec05de67cab03792bb3304285f8481581340d6f3a5b39bce"
+  },
+  "metrics": {
+    "0.0": {
+      "anchor_accuracy": 0.0390625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 25,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.04854368932038835,
+          "explorer_mean_accuracy": 0.03559870550161812,
+          "mixed_fraction": 0.10679611650485436,
+          "oracle_at_k": 0.10679611650485436,
+          "prompt_groups": 103,
+          "rescue_fraction": 0.05825242718446602
+        }
+      },
+      "explorer_mean_accuracy": 0.028645833333333332,
+      "mixed_fraction": 0.0859375,
+      "oracle_at_k": 0.0859375,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 128,
+      "rescue_fraction": 0.046875,
+      "scale": 0.0
+    },
+    "0.005": {
+      "anchor_accuracy": 0.0390625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 25,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.04854368932038835,
+          "explorer_mean_accuracy": 0.032362459546925564,
+          "mixed_fraction": 0.10679611650485436,
+          "oracle_at_k": 0.10679611650485436,
+          "prompt_groups": 103,
+          "rescue_fraction": 0.05825242718446602
+        }
+      },
+      "explorer_mean_accuracy": 0.026041666666666664,
+      "mixed_fraction": 0.0859375,
+      "oracle_at_k": 0.0859375,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 128,
+      "rescue_fraction": 0.046875,
+      "scale": 0.005
+    },
+    "0.01": {
+      "anchor_accuracy": 0.0390625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 25,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.04854368932038835,
+          "explorer_mean_accuracy": 0.032362459546925564,
+          "mixed_fraction": 0.10679611650485436,
+          "oracle_at_k": 0.10679611650485436,
+          "prompt_groups": 103,
+          "rescue_fraction": 0.05825242718446602
+        }
+      },
+      "explorer_mean_accuracy": 0.026041666666666664,
+      "mixed_fraction": 0.0859375,
+      "oracle_at_k": 0.0859375,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0234375,
+        "low": -0.0234375,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 128,
+      "rescue_fraction": 0.046875,
+      "scale": 0.01
+    },
+    "0.02": {
+      "anchor_accuracy": 0.0390625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 25,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.04854368932038835,
+          "explorer_mean_accuracy": 0.03559870550161812,
+          "mixed_fraction": 0.11650485436893204,
+          "oracle_at_k": 0.11650485436893204,
+          "prompt_groups": 103,
+          "rescue_fraction": 0.06796116504854369
+        }
+      },
+      "explorer_mean_accuracy": 0.028645833333333332,
+      "mixed_fraction": 0.09375,
+      "oracle_at_k": 0.09375,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0234375,
+        "low": 0.0,
+        "mean_delta": 0.0078125
+      },
+      "prompt_groups": 128,
+      "rescue_fraction": 0.0546875,
+      "scale": 0.02
+    },
+    "0.03": {
+      "anchor_accuracy": 0.0390625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 25,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.04854368932038835,
+          "explorer_mean_accuracy": 0.03559870550161812,
+          "mixed_fraction": 0.1262135922330097,
+          "oracle_at_k": 0.1262135922330097,
+          "prompt_groups": 103,
+          "rescue_fraction": 0.07766990291262135
+        }
+      },
+      "explorer_mean_accuracy": 0.028645833333333332,
+      "mixed_fraction": 0.1015625,
+      "oracle_at_k": 0.1015625,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0390625,
+        "low": 0.0,
+        "mean_delta": 0.015625
+      },
+      "prompt_groups": 128,
+      "rescue_fraction": 0.0625,
+      "scale": 0.03
+    },
+    "0.05": {
+      "anchor_accuracy": 0.0390625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 25,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.04854368932038835,
+          "explorer_mean_accuracy": 0.042071197411003236,
+          "mixed_fraction": 0.11650485436893204,
+          "oracle_at_k": 0.11650485436893204,
+          "prompt_groups": 103,
+          "rescue_fraction": 0.06796116504854369
+        }
+      },
+      "explorer_mean_accuracy": 0.033854166666666664,
+      "mixed_fraction": 0.09375,
+      "oracle_at_k": 0.09375,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0390625,
+        "low": -0.015625,
+        "mean_delta": 0.0078125
+      },
+      "prompt_groups": 128,
+      "rescue_fraction": 0.0546875,
+      "scale": 0.05
+    }
+  },
+  "note": "Selected only on a deterministic unique rl_train development slice. Task-balanced, source-interleaved prompt IDs form disjoint selection and confirmation halves; the evidence flag is computed only on confirmation. No q_warm or final benchmark examples were used. Actor rewards are logged for audit but never choose the scale.",
+  "oracle_tie_tolerance": 0.0,
+  "prompt_groups": 128,
+  "prompt_ids": [
+    "v1-dapo-math-en-034e36964624e4725b62",
+    "v1-dapo-math-en-117ff8550ba07e3f1ffd",
+    "v1-dapo-math-en-1f2c2b75fea348beceb2",
+    "v1-dapo-math-en-2735adf1940d0940feef",
+    "v1-dapo-math-en-29e8c5bdea291a71e229",
+    "v1-dapo-math-en-2bc6ba593f01de70f503",
+    "v1-dapo-math-en-2fa5ca7b96297c30d8f9",
+    "v1-dapo-math-en-3063c241659e57df76ef",
+    "v1-dapo-math-en-348d5742386b60928109",
+    "v1-dapo-math-en-3658fbb75cf9f4ca82fe",
+    "v1-dapo-math-en-37bca4e48181d6d13600",
+    "v1-dapo-math-en-3a73da15a99f26bfdbc4",
+    "v1-dapo-math-en-413722e3e5e20d447873",
+    "v1-dapo-math-en-417bb97a2dea5fec314d",
+    "v1-dapo-math-en-42c6e0101ee0dbed854d",
+    "v1-dapo-math-en-438363e972f0f40cf883",
+    "v1-dapo-math-en-43903804a05321fe5f0f",
+    "v1-dapo-math-en-43b5bbb6e02423dc8f55",
+    "v1-dapo-math-en-46978188ba74e1376286",
+    "v1-dapo-math-en-480b99ad7f2a4a50cd60",
+    "v1-dapo-math-en-4829369b77a4cb910ca5",
+    "v1-dapo-math-en-4887bdf5fccd441a4d82",
+    "v1-dapo-math-en-4a34ccc9b29fc9aecafa",
+    "v1-dapo-math-en-509a7d2a8043062cadd4",
+    "v1-dapo-math-en-52e901fad007dad1e98b",
+    "v1-dapo-math-en-533e5feb77c2cec41a72",
+    "v1-dapo-math-en-5679391db5cf1f891c86",
+    "v1-dapo-math-en-5704796c5bcfac6840cf",
+    "v1-dapo-math-en-57faae5d5269c992b70c",
+    "v1-dapo-math-en-5836980045665399ec91",
+    "v1-dapo-math-en-5a00969d78124211ca41",
+    "v1-dapo-math-en-5a58b9c47923741dde1c",
+    "v1-dapo-math-en-5f91a2add3fd75693558",
+    "v1-dapo-math-en-647d10d1d32e12b0aab3",
+    "v1-dapo-math-en-65b0d7eb5ee036739059",
+    "v1-dapo-math-en-66a6bcb7049969acfd69",
+    "v1-dapo-math-en-67a0fcc4d5d6aab7074f",
+    "v1-dapo-math-en-68072729d71b554d0340",
+    "v1-dapo-math-en-6845e4c06e3d2c0b8bba",
+    "v1-dapo-math-en-69a900b003a3fefd6089",
+    "v1-dapo-math-en-6a1568b8e265229a7136",
+    "v1-dapo-math-en-6d1a786e958fcd113d4f",
+    "v1-dapo-math-en-74e7117530cada9343af",
+    "v1-dapo-math-en-75e1fecc1a6a55e7e745",
+    "v1-dapo-math-en-790a0dc8dbff260da14f",
+    "v1-dapo-math-en-7912bdc4f87f8998711e",
+    "v1-dapo-math-en-807eb5b12e52d54805c9",
+    "v1-dapo-math-en-80cf97534b9438e0770f",
+    "v1-dapo-math-en-84e4c3a857d503bc66ad",
+    "v1-dapo-math-en-85f0daa345e8d415b71d",
+    "v1-dapo-math-en-869fa3fa3b749542ddd6",
+    "v1-dapo-math-en-86e0545e1d42e474cbad",
+    "v1-dapo-math-en-89922e9a1faae7066ed9",
+    "v1-dapo-math-en-89f8ab3bc7bf6a4eb04c",
+    "v1-dapo-math-en-8c292e17d0edd5debc5b",
+    "v1-dapo-math-en-8fc07dbf2fd3bf8dd3de",
+    "v1-dapo-math-en-91f9c2b940d2c2729be4",
+    "v1-dapo-math-en-94107580a8edc709b829",
+    "v1-dapo-math-en-9425854e3e44dcf0309b",
+    "v1-dapo-math-en-9433a9b8870c16cc43b2",
+    "v1-dapo-math-en-9590c6ba2ba5bf7d4b2e",
+    "v1-dapo-math-en-987b41c7f435c6fdefce",
+    "v1-dapo-math-en-98915a4557964f9e1953",
+    "v1-dapo-math-en-99d82b0325179f1d708c",
+    "v1-dapo-math-en-a2514a34f4d855a1cf08",
+    "v1-dapo-math-en-a4f1439bc3d66e7b38d7",
+    "v1-dapo-math-en-a86b3db86e975fc47ade",
+    "v1-dapo-math-en-aaad444b5ebf3ed754c9",
+    "v1-dapo-math-en-ae64eb184758a2aea80a",
+    "v1-dapo-math-en-af323b07c90f86ccd6c7",
+    "v1-dapo-math-en-b3a84947fd84e0c61194",
+    "v1-dapo-math-en-b3fffe3b45e49524beeb",
+    "v1-dapo-math-en-b6e30fa14f8a9eb7ed5b",
+    "v1-dapo-math-en-b89e1640d3a6a9c444c9",
+    "v1-dapo-math-en-ba37362d4af7bbf45a77",
+    "v1-dapo-math-en-bcaf527996e50db3cde7",
+    "v1-dapo-math-en-bff6b3358258c72413ec",
+    "v1-dapo-math-en-c156f5de54458ff4eb99",
+    "v1-dapo-math-en-c2e78eda64cf98b92ae7",
+    "v1-dapo-math-en-c7263a6b47df6282a3f7",
+    "v1-dapo-math-en-c791cc9606c2fb71e3f2",
+    "v1-dapo-math-en-c8a999021ce3e1a37b72",
+    "v1-dapo-math-en-cd82a37f59487e643c2c",
+    "v1-dapo-math-en-cedfeafd9db61317c252",
+    "v1-dapo-math-en-d31271362b4786c0591c",
+    "v1-dapo-math-en-d34aeec1976468b60837",
+    "v1-dapo-math-en-d4d43f10159ce54d63e1",
+    "v1-dapo-math-en-d9579e306adb2a11e8d5",
+    "v1-dapo-math-en-dad762a89fb0f9479ccf",
+    "v1-dapo-math-en-dcf55865eab83c75a6f4",
+    "v1-dapo-math-en-dcfa04c518dafd2c191d",
+    "v1-dapo-math-en-dd54e7f45e55d92ef5aa",
+    "v1-dapo-math-en-e0bcd026aacebd606e2f",
+    "v1-dapo-math-en-e858869ea049df0e532d",
+    "v1-dapo-math-en-ed6de5c09667300604e3",
+    "v1-dapo-math-en-edcdf851ede0da8b8808",
+    "v1-dapo-math-en-f0c08d70693646ad9e87",
+    "v1-dapo-math-en-f12fbaca6938d3262ef2",
+    "v1-dapo-math-en-f43e3a968e9bfa9dbc26",
+    "v1-dapo-math-en-f69784b05652bdc5443c",
+    "v1-dapo-math-en-f74a1833fd4727e599df",
+    "v1-dapo-math-en-fa308f0fcbb0283cd739",
+    "v1-dapo-math-en-fe7864a5ca0e79740bd1",
+    "v1-verified-python-0a16157aecb38ae5663c",
+    "v1-verified-python-0aa6efc422b15762a6d4",
+    "v1-verified-python-0f4f6c231f3371db34e9",
+    "v1-verified-python-156b1d7898564b8ab665",
+    "v1-verified-python-1f2cfd8d476bb790d9ed",
+    "v1-verified-python-384e4857aeda5a31bb26",
+    "v1-verified-python-45c64180523523e0e152",
+    "v1-verified-python-4a66d2b7e21ef85c4ee3",
+    "v1-verified-python-60e673dc9c7030eb4774",
+    "v1-verified-python-674f2e66d305591a1a53",
+    "v1-verified-python-8100f1dcfba0c962afaa",
+    "v1-verified-python-8303a773e1e3f661acac",
+    "v1-verified-python-8915de731af70cec50ba",
+    "v1-verified-python-9506ea45056fd36035b4",
+    "v1-verified-python-970f9bf5a00c1c3e72b2",
+    "v1-verified-python-9c016463f1b4504f9345",
+    "v1-verified-python-bd573fda3f2b409410f3",
+    "v1-verified-python-d221226639d4849fc3e7",
+    "v1-verified-python-d520ec51f5cb84262613",
+    "v1-verified-python-db58e3795161ccad173b",
+    "v1-verified-python-e3821da97358e65be0b2",
+    "v1-verified-python-f0a56b149faa2b8983da",
+    "v1-verified-python-f88f19a1b95f57231311",
+    "v1-verified-python-f9a377a467a44a533f9d",
+    "v1-verified-python-f9bfdc6ed055ccae6ee3"
+  ],
+  "rng_design": "fresh common latent/token RNG seed for every batch across scales",
+  "scale_candidates": [
+    0.0,
+    0.005,
+    0.01,
+    0.02,
+    0.03,
+    0.05
+  ],
+  "selected_relative_rms": 0.05,
+  "selection_metrics": {
+    "0.0": {
+      "anchor_accuracy": 0.0625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 12,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.07692307692307693,
+          "explorer_mean_accuracy": 0.057692307692307696,
+          "mixed_fraction": 0.15384615384615385,
+          "oracle_at_k": 0.15384615384615385,
+          "prompt_groups": 52,
+          "rescue_fraction": 0.07692307692307693
+        }
+      },
+      "explorer_mean_accuracy": 0.046875,
+      "mixed_fraction": 0.125,
+      "oracle_at_k": 0.125,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.0625,
+      "scale": 0.0
+    },
+    "0.005": {
+      "anchor_accuracy": 0.0625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 12,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.07692307692307693,
+          "explorer_mean_accuracy": 0.05128205128205128,
+          "mixed_fraction": 0.15384615384615385,
+          "oracle_at_k": 0.15384615384615385,
+          "prompt_groups": 52,
+          "rescue_fraction": 0.07692307692307693
+        }
+      },
+      "explorer_mean_accuracy": 0.041666666666666664,
+      "mixed_fraction": 0.125,
+      "oracle_at_k": 0.125,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.0625,
+      "scale": 0.005
+    },
+    "0.01": {
+      "anchor_accuracy": 0.0625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 12,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.07692307692307693,
+          "explorer_mean_accuracy": 0.05128205128205128,
+          "mixed_fraction": 0.15384615384615385,
+          "oracle_at_k": 0.15384615384615385,
+          "prompt_groups": 52,
+          "rescue_fraction": 0.07692307692307693
+        }
+      },
+      "explorer_mean_accuracy": 0.041666666666666664,
+      "mixed_fraction": 0.125,
+      "oracle_at_k": 0.125,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.046875,
+        "low": -0.046875,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.0625,
+      "scale": 0.01
+    },
+    "0.02": {
+      "anchor_accuracy": 0.0625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 12,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.07692307692307693,
+          "explorer_mean_accuracy": 0.05128205128205128,
+          "mixed_fraction": 0.15384615384615385,
+          "oracle_at_k": 0.15384615384615385,
+          "prompt_groups": 52,
+          "rescue_fraction": 0.07692307692307693
+        }
+      },
+      "explorer_mean_accuracy": 0.041666666666666664,
+      "mixed_fraction": 0.125,
+      "oracle_at_k": 0.125,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.0625,
+      "scale": 0.02
+    },
+    "0.03": {
+      "anchor_accuracy": 0.0625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 12,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.07692307692307693,
+          "explorer_mean_accuracy": 0.044871794871794865,
+          "mixed_fraction": 0.15384615384615385,
+          "oracle_at_k": 0.15384615384615385,
+          "prompt_groups": 52,
+          "rescue_fraction": 0.07692307692307693
+        }
+      },
+      "explorer_mean_accuracy": 0.03645833333333333,
+      "mixed_fraction": 0.125,
+      "oracle_at_k": 0.125,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.0,
+        "low": 0.0,
+        "mean_delta": 0.0
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.0625,
+      "scale": 0.03
+    },
+    "0.05": {
+      "anchor_accuracy": 0.0625,
+      "by_task": {
+        "code": {
+          "anchor_accuracy": 0.0,
+          "explorer_mean_accuracy": 0.0,
+          "mixed_fraction": 0.0,
+          "oracle_at_k": 0.0,
+          "prompt_groups": 12,
+          "rescue_fraction": 0.0
+        },
+        "math": {
+          "anchor_accuracy": 0.07692307692307693,
+          "explorer_mean_accuracy": 0.0641025641025641,
+          "mixed_fraction": 0.17307692307692307,
+          "oracle_at_k": 0.17307692307692307,
+          "prompt_groups": 52,
+          "rescue_fraction": 0.09615384615384616
+        }
+      },
+      "explorer_mean_accuracy": 0.05208333333333333,
+      "mixed_fraction": 0.140625,
+      "oracle_at_k": 0.140625,
+      "oracle_delta_vs_zero": {
+        "confidence": 0.95,
+        "high": 0.078125,
+        "low": -0.03125,
+        "mean_delta": 0.015625
+      },
+      "prompt_groups": 64,
+      "rescue_fraction": 0.078125,
+      "scale": 0.05
+    }
+  },
+  "selection_objective": "strict binary correctness oracle@4",
+  "selection_prompt_ids": [
+    "v1-dapo-math-en-034e36964624e4725b62",
+    "v1-dapo-math-en-29e8c5bdea291a71e229",
+    "v1-dapo-math-en-3063c241659e57df76ef",
+    "v1-dapo-math-en-348d5742386b60928109",
+    "v1-dapo-math-en-3a73da15a99f26bfdbc4",
+    "v1-dapo-math-en-413722e3e5e20d447873",
+    "v1-dapo-math-en-43b5bbb6e02423dc8f55",
+    "v1-dapo-math-en-46978188ba74e1376286",
+    "v1-dapo-math-en-480b99ad7f2a4a50cd60",
+    "v1-dapo-math-en-4829369b77a4cb910ca5",
+    "v1-dapo-math-en-4887bdf5fccd441a4d82",
+    "v1-dapo-math-en-4a34ccc9b29fc9aecafa",
+    "v1-dapo-math-en-52e901fad007dad1e98b",
+    "v1-dapo-math-en-533e5feb77c2cec41a72",
+    "v1-dapo-math-en-5704796c5bcfac6840cf",
+    "v1-dapo-math-en-5836980045665399ec91",
+    "v1-dapo-math-en-5a00969d78124211ca41",
+    "v1-dapo-math-en-5a58b9c47923741dde1c",
+    "v1-dapo-math-en-647d10d1d32e12b0aab3",
+    "v1-dapo-math-en-65b0d7eb5ee036739059",
+    "v1-dapo-math-en-68072729d71b554d0340",
+    "v1-dapo-math-en-6845e4c06e3d2c0b8bba",
+    "v1-dapo-math-en-69a900b003a3fefd6089",
+    "v1-dapo-math-en-75e1fecc1a6a55e7e745",
+    "v1-dapo-math-en-80cf97534b9438e0770f",
+    "v1-dapo-math-en-84e4c3a857d503bc66ad",
+    "v1-dapo-math-en-85f0daa345e8d415b71d",
+    "v1-dapo-math-en-869fa3fa3b749542ddd6",
+    "v1-dapo-math-en-86e0545e1d42e474cbad",
+    "v1-dapo-math-en-89922e9a1faae7066ed9",
+    "v1-dapo-math-en-89f8ab3bc7bf6a4eb04c",
+    "v1-dapo-math-en-94107580a8edc709b829",
+    "v1-dapo-math-en-9590c6ba2ba5bf7d4b2e",
+    "v1-dapo-math-en-99d82b0325179f1d708c",
+    "v1-dapo-math-en-a4f1439bc3d66e7b38d7",
+    "v1-dapo-math-en-aaad444b5ebf3ed754c9",
+    "v1-dapo-math-en-af323b07c90f86ccd6c7",
+    "v1-dapo-math-en-b3a84947fd84e0c61194",
+    "v1-dapo-math-en-b3fffe3b45e49524beeb",
+    "v1-dapo-math-en-b89e1640d3a6a9c444c9",
+    "v1-dapo-math-en-ba37362d4af7bbf45a77",
+    "v1-dapo-math-en-bff6b3358258c72413ec",
+    "v1-dapo-math-en-c156f5de54458ff4eb99",
+    "v1-dapo-math-en-c791cc9606c2fb71e3f2",
+    "v1-dapo-math-en-cd82a37f59487e643c2c",
+    "v1-dapo-math-en-cedfeafd9db61317c252",
+    "v1-dapo-math-en-d31271362b4786c0591c",
+    "v1-dapo-math-en-d34aeec1976468b60837",
+    "v1-dapo-math-en-dd54e7f45e55d92ef5aa",
+    "v1-dapo-math-en-e0bcd026aacebd606e2f",
+    "v1-dapo-math-en-e858869ea049df0e532d",
+    "v1-dapo-math-en-f74a1833fd4727e599df",
+    "v1-verified-python-0aa6efc422b15762a6d4",
+    "v1-verified-python-384e4857aeda5a31bb26",
+    "v1-verified-python-60e673dc9c7030eb4774",
+    "v1-verified-python-8100f1dcfba0c962afaa",
+    "v1-verified-python-8303a773e1e3f661acac",
+    "v1-verified-python-8915de731af70cec50ba",
+    "v1-verified-python-9506ea45056fd36035b4",
+    "v1-verified-python-970f9bf5a00c1c3e72b2",
+    "v1-verified-python-e3821da97358e65be0b2",
+    "v1-verified-python-f88f19a1b95f57231311",
+    "v1-verified-python-f9a377a467a44a533f9d",
+    "v1-verified-python-f9bfdc6ed055ccae6ee3"
+  ],
+  "selection_rule": "smallest positive scale within oracle_tie_tolerance of the best oracle@4 on the selection half, followed by a disjoint confirmation no-degradation gate; scale zero is baseline-only",
+  "shard_sha256": {
+    "rank-00.jsonl": "151e7dbce42e614be931fdc9604738ac2a14772739850f7e71f46c4398a0005b"
+  },
+  "version": 1
+}

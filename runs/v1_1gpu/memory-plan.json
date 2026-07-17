@@ -1,0 +1,112 @@
+{
+  "effective_global_prompt_groups_per_update": 8,
+  "format": "hrm-particle-v1-memory-plan",
+  "hard_limit_fraction": 0.8,
+  "identity": {
+    "config_hash": "35798d58bfb5c880573b529a321f9ad7f384c22ab940445ef27fcc356d684c91",
+    "model_revision": "9f082d68b8cd0ebc56e33f1c88c45609174c272c",
+    "token_audit_sha256": "fa4b1f99d8cbbf89e76e30f344b53b6432d676d31cce0849dcf94367ea80c103",
+    "world_size": 1
+  },
+  "lower_target_fraction": 0.7,
+  "measured_minimum_free_gib": 202.643798828125,
+  "measured_peak_fraction_max": 0.2711096397212048,
+  "minimum_free_gib": 4.0,
+  "minimum_total_bytes": 299453317120,
+  "minimum_usable_capacity_bytes": 298518315008,
+  "q_batch_prompt_groups": 32,
+  "rank_reports": [
+    {
+      "attempts": {
+        "1": {
+          "baseline_allocated_bytes": 2367166464,
+          "baseline_reserved_bytes": 2552233984,
+          "free_before_bytes": 295966081024,
+          "max_new_tokens": 384,
+          "oom": null,
+          "peak_allocated_bytes": 12293141504,
+          "peak_allocated_gib": 11.448880195617676,
+          "peak_reserved_bytes": 28418506752,
+          "peak_reserved_gib": 26.466796875,
+          "physical_total_bytes": 299453317120,
+          "prompt_batch_size": 1,
+          "response_tokens_observed": 384,
+          "success": true,
+          "usable_capacity_bytes": 298518315008
+        },
+        "2": {
+          "baseline_allocated_bytes": 2434275840,
+          "baseline_reserved_bytes": 2625634304,
+          "free_before_bytes": 295565524992,
+          "max_new_tokens": 384,
+          "oom": null,
+          "peak_allocated_bytes": 22216270848,
+          "peak_allocated_gib": 20.69051456451416,
+          "peak_reserved_bytes": 80931192832,
+          "peak_reserved_gib": 75.373046875,
+          "physical_total_bytes": 299453317120,
+          "prompt_batch_size": 2,
+          "response_tokens_observed": 384,
+          "success": true,
+          "usable_capacity_bytes": 298191159296
+        },
+        "4": {
+          "baseline_allocated_bytes": 2434275840,
+          "baseline_reserved_bytes": 2625634304,
+          "free_before_bytes": 295565524992,
+          "max_new_tokens": 384,
+          "oom": null,
+          "peak_allocated_bytes": 41997978112,
+          "peak_allocated_gib": 39.11366510391235,
+          "peak_reserved_bytes": 285105717248,
+          "peak_reserved_gib": 265.525390625,
+          "physical_total_bytes": 299453317120,
+          "prompt_batch_size": 4,
+          "response_tokens_observed": 384,
+          "success": true,
+          "usable_capacity_bytes": 298191159296
+        },
+        "8": {
+          "baseline_allocated_bytes": 2434275840,
+          "baseline_reserved_bytes": 2625634304,
+          "free_before_bytes": 295567622144,
+          "max_new_tokens": 384,
+          "oom": null,
+          "peak_allocated_bytes": 81203105792,
+          "peak_allocated_gib": 75.62628555297852,
+          "peak_reserved_bytes": 298135322624,
+          "peak_reserved_gib": 277.66015625,
+          "physical_total_bytes": 299453317120,
+          "prompt_batch_size": 8,
+          "response_tokens_observed": 384,
+          "success": true,
+          "usable_capacity_bytes": 298193256448
+        }
+      },
+      "device_name": "NVIDIA Graphics Device",
+      "local_estimate": {
+        "estimated_fraction": 0.31383714875078705,
+        "estimated_peak_bytes": 93686136832,
+        "gradient_accumulation_steps": 1,
+        "prompt_batch_size": 8
+      },
+      "physical_total_bytes": 299453317120,
+      "physical_total_gib": 278.88763427734375,
+      "probe_max_new_tokens": 384,
+      "probe_prompt_tokens": 1819,
+      "probe_record_id": "v1-verified-python-dd4e8fbbc5bd58d67f47",
+      "probe_stage": "q_warm_and_final_q",
+      "probe_total_tokens": 2206,
+      "rank": 0,
+      "usable_capacity_bytes": 298518315008,
+      "usable_capacity_gib": 278.016845703125
+    }
+  ],
+  "rl_gradient_accumulation_steps": 4,
+  "rl_prompt_micro_batch_size": 2,
+  "rollout_prompt_batch_size": 2,
+  "selection_basis": "real longest-prompt cached rollout padded to the configured action cap + clean-reference replay + particle replay/backward; minimum safe result across ranks",
+  "target_fraction": 0.75,
+  "target_prompt_groups_per_rank_update": 8,
+  "version": 1
+}

@@ -1,0 +1,36 @@
+{
+  "candidate_examples": 8192,
+  "data_fingerprints": {
+    "files": {
+      "eval": {
+        "bytes": 2095888,
+        "path": "eval_math.jsonl",
+        "records": 2319,
+        "sha256": "b32e7451aa3a0849a78b7289686a26874024e9291bffcc3088de8e26be6f1391"
+      },
+      "q_warm": {
+        "bytes": 17610495,
+        "path": "q_warm.jsonl",
+        "records": 2048,
+        "sha256": "a952f71925fa58a68b113832676cc160d0bec9ac59dd2a12ac1254ddd428b473"
+      },
+      "rl_train": {
+        "bytes": 15474429,
+        "path": "rl_train.jsonl",
+        "records": 5000,
+        "sha256": "9d931b8aef8086d4406a8a2bb77e77de5f5dfe09287f8dfa122fa10b8917ef7d"
+      }
+    },
+    "generator_version": "hrm_particle_v1_math_code_1",
+    "manifest_sha256": "f9dbf294d2b4b658a7cacaef83b160f2b2dd3f3986749b58e50338026af13594",
+    "schema_version": 1
+  },
+  "initial_adapter_sha256": "e9f64fd55dcb0fa829a76cec62184b4e2f0e1222cfede41e6f7f7f0f5521bda4",
+  "k": 4,
+  "memory_plan_sha256": "ef81b57bde2e37ed243db7157080c8dee46d1152956cc7812818fb5f8af2527a",
+  "model_revision": "9f082d68b8cd0ebc56e33f1c88c45609174c272c",
+  "noise_scale_selection_sha256": "7e5a2ed11a8f4cf6aa90679d9e1e609d3859b46eaa3cd2a7afd5cdab054a7973",
+  "note": "Q labels are strict external correctness, never Q self-reward.",
+  "prompt_groups": 2048,
+  "world_size": 1
+}

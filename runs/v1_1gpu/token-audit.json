@@ -1,0 +1,84 @@
+{
+  "format": "hrm-particle-v1-token-audit",
+  "manifest_sha256": "f9dbf294d2b4b658a7cacaef83b160f2b2dd3f3986749b58e50338026af13594",
+  "manifest_validation": {
+    "directory": "/localhome/local-abhaym/bench/hrm-particle/data/v1",
+    "files": {
+      "eval": 2319,
+      "q_warm": 2048,
+      "rl_train": 5000
+    },
+    "manifest_sha256": "f9dbf294d2b4b658a7cacaef83b160f2b2dd3f3986749b58e50338026af13594",
+    "records": 9367
+  },
+  "max_position_embeddings": 4096,
+  "model_revision": "9f082d68b8cd0ebc56e33f1c88c45609174c272c",
+  "response_prefix_tokens": 3,
+  "stages": {
+    "eval_math": {
+      "longest_ids": [
+        "v1-math500-40f602828695dab8707d",
+        "v1-math500-4cfe5a4809c40c42ee1e",
+        "v1-math500-f482aafcc0d939e03a09",
+        "v1-math500-44c354d6040b067b05d2",
+        "v1-math500-5b6ac7ee037c657b9b06"
+      ],
+      "max_new_tokens": 256,
+      "max_total_tokens": 1055,
+      "p99_total_tokens": 492,
+      "rows": 2319
+    },
+    "eval_mbpp": {
+      "longest_ids": [
+        "mbpp-250",
+        "mbpp-60",
+        "mbpp-168",
+        "mbpp-335",
+        "mbpp-305"
+      ],
+      "max_new_tokens": 384,
+      "max_total_tokens": 594,
+      "p99_total_tokens": 564,
+      "rows": 378
+    },
+    "final_q_calibration": {
+      "longest_ids": [
+        "v1-verified-python-dd4e8fbbc5bd58d67f47",
+        "v1-verified-python-e25547965a3aa48eeb27",
+        "v1-verified-python-7e0dd675ae59c5caa158",
+        "v1-verified-python-e997e1d6382e764f5b0a",
+        "v1-verified-python-f361b6f65899ec2e6c2e"
+      ],
+      "max_new_tokens": "task-specific math/code evaluation cap",
+      "max_total_tokens": 2206,
+      "p99_total_tokens": 1469,
+      "rows": 2048
+    },
+    "q_warm": {
+      "longest_ids": [
+        "v1-verified-python-dd4e8fbbc5bd58d67f47",
+        "v1-verified-python-e25547965a3aa48eeb27",
+        "v1-verified-python-7e0dd675ae59c5caa158",
+        "v1-verified-python-e997e1d6382e764f5b0a",
+        "v1-verified-python-f361b6f65899ec2e6c2e"
+      ],
+      "max_new_tokens": 192,
+      "max_total_tokens": 2014,
+      "p99_total_tokens": 1277,
+      "rows": 2048
+    },
+    "rl_train": {
+      "longest_ids": [
+        "v1-verified-python-5116580a385b5a8ceca3",
+        "v1-verified-python-5d2e39585a7334581323",
+        "v1-verified-python-c7be879f4ee032e9224d",
+        "v1-verified-python-68b587548fcf7753510a",
+        "v1-verified-python-70c7de6749871c764cb7"
+      ],
+      "max_new_tokens": 256,
+      "max_total_tokens": 2049,
+      "p99_total_tokens": 1313,
+      "rows": 5000
+    }
+  }
+}
